@@ -144,5 +144,5 @@ GSYMS
 GTAGS
 
 # Data files
-serwisy_7z/
-serwisy_xml/
+serwisy_7z/*.7z
+serwisy_xml/**/*.xml
