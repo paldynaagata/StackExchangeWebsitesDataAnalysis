@@ -142,3 +142,7 @@ GPATH
 GRTAGS
 GSYMS
 GTAGS
+
+# Data files
+serwisy_7z/
+serwisy_xml/
