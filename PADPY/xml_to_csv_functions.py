@@ -24,7 +24,7 @@ def get_name_of_file_without_extension(file):
 
 def xml_to_csv_file(catalog, name):
     """
-    Funkcja tworzy plik *.csv na podstawie podanego pliku *.xml 
+    Funkcja tworzy plik name.csv na podstawie podanego pliku name.xml 
     z podanego folderu (catalog)
     """
     xml_path = os.path.join("..", ROOT_PATH, catalog, name) + ".xml"
@@ -58,6 +58,10 @@ def xml_to_csv_file(catalog, name):
     f.close()
 
 def convert_xml_files_to_csv_files(catalog):
+    """
+    Funkcja tworzy pliki *.csv na podstawie plikow *.xml 
+    z podanego folderu (catalog)
+    """
     directory = os.path.join("..", ROOT_PATH, catalog)
     files_list = get_list_of_files_from_directory(directory, "xml")
     for file in files_list:
