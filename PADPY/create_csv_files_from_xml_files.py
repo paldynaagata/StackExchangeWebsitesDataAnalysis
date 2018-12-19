@@ -1,0 +1,5 @@
+import xml_to_csv_functions as conv
+
+conv.convert_xml_files_to_csv_files("fitness_stackexchange_com")
+conv.convert_xml_files_to_csv_files("interpersonal_stackexchange_com")
+conv.convert_xml_files_to_csv_files("worldbuilding_stackexchange_com")
