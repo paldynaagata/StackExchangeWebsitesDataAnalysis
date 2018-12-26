@@ -6,6 +6,8 @@ import xml.etree.ElementTree as ET
 import os
 import csv
 import glob
+import sqlite3
+import pandas as pd
 
 
 def download_unpack_7z_to_catalog(url, catalog):
@@ -102,3 +104,23 @@ def convert_xml_files_to_csv_files(catalog):
         f = get_elem_from_path(file, 3)
         name = get_name_of_file_without_extension(f)
         xml_to_csv_file(catalog, name)
+
+
+def read_csv_files_and_add_to_data_base(catalog, letter, connection):
+    """
+    Funkcja wczytuje ramki w formacie csv z podanego folderu (catalog)
+    a następnie dodaje je do bazy danych (connection)
+    
+    letter - pomocnicza zmienna do rozróżniania nazw tabel
+    """
+    tables = {}
+    directory = os.path.join("..", CSV_PATH, catalog)
+    files_list = get_list_of_files_from_directory(directory, "csv")
+    for file in files_list:
+        f = get_elem_from_path(file, 3)
+        name = get_name_of_file_without_extension(f)
+        table_name = name + letter
+        table = pd.read_csv(file, comment = "#")
+        tables[table_name] = table
+        table.to_sql(table_name, connection)
+    return tables

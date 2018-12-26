@@ -147,3 +147,6 @@ GTAGS
 serwisy_7z/*.7z
 serwisy_xml/**/*.xml
 serwisy_csv/**/*.csv
+
+# Data bases
+PADPY/*.db
