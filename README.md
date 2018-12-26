@@ -18,7 +18,7 @@ Tak w skrócie:
 ### PADPy
 * moduł z funkcjami **functions.py**
 * skrypty: **download_unpack_7z_script.py**, **create_csv_files_from_xml_files_script.py**, ...
-* notatnik z tworzeniem bazy, zapytaniami, wykresami
+* notatnik z tworzeniem bazy, zapytaniami, wykresami **data_analys.ipynb**
 * prezentacja
 
 ### PADR
