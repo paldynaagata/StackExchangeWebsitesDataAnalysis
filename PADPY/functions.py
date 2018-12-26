@@ -85,9 +85,12 @@ def xml_to_csv_file(catalog, name):
 
     for row in root.findall('row'):
         _row = []
-        for key in row.attrib:
-            value = row.attrib.get(key)
-            _row.append(value)
+        for key in head:
+            if key in row.attrib:
+                value = row.attrib.get(key)
+                _row.append(value)
+            else:
+                _row.append(None)
         csvwriter.writerow(_row) 
         
     f.close()
