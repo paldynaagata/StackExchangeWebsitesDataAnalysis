@@ -7,7 +7,7 @@ Tak w skrócie:
 |             TO DO              |  PADPy  |  PADR  |
 |--------------------------------|:-------:|:------:|
 |  Pobranie i rozpakowanie *.7z  |    +    |    -   |
-|           XML -> CSV           |    +    |        |
+|           XML -> CSV           |    +    |    +   |
 |        Ciekawe zapytania       |         |        |
 |             Wykresy            |         |        |
 |           Prezentacja          |         |        |
@@ -22,6 +22,6 @@ Tak w skrócie:
 * prezentacja
 
 ### PADR
-* ...
+* skrypt: **xml_to_csv.R**
 * ...
 * prezentacja
