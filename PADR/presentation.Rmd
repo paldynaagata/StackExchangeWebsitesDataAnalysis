@@ -1,0 +1,34 @@
+---
+title: "Analiza serwisów Stack Exchange"
+author: "Agata Pa³dyna, Marika Partyka"
+#date: "9 stycznia 2019"
+output: 
+  revealjs::revealjs_presentation:
+    theme: solarized
+    transition: fade
+    center: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Sposób rozwi¹zania zadania
+
+
+
+## Pyt1
+
+wykres
+
+## Pyt2
+
+wykres
+
+## Pyt3
+
+wykres
+
+## Pytania?
+
+## Dziêkujemy za uwagê :)
