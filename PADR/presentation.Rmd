@@ -13,21 +13,41 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## Sposób rozwi¹zania zadania
+## Wybrane serwisy
 
-
+- Fitness
+- Interpersonal
+- Worldbuilding
 
 ## Pyt1
 
 wykres
 
+## Sposób rozwi¹zania zadania
+
+- rzecz1
+- rzecz2
+- ...
+
 ## Pyt2
 
 wykres
 
+## Sposób rozwi¹zania zadania
+
+- rzecz1
+- rzecz2
+- ...
+
 ## Pyt3
 
 wykres
+
+## Sposób rozwi¹zania zadania
+
+- rzecz1
+- rzecz2
+- ...
 
 ## Pytania?
 
