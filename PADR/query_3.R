@@ -3,12 +3,12 @@
 # Fitness
 yF<-PostsF%>%filter(PostTypeId==1)%>%select(Id, ParentId, CommentCount)# Pytania
 xF<-PostsF%>%filter(PostTypeId==2)%>%select(Id, CommentCount, ParentId)#Odpowiedzi
-zF<-inner_join(y,x, by=c("Id"="ParentId"))
-uF<-z%>%group_by(Id)%>%summarise(TotalComCnt=sum(CommentCount.y), n=length(Id))# 
+zF<-inner_join(yF,xF, by=c("Id"="ParentId"))
+uF<-zF%>%group_by(Id)%>%summarise(TotalComCnt=sum(CommentCount.y), n=length(Id))# 
 
-QuestionsComCntF<-inner_join(u, z, by="Id")%>%mutate(TotalCommentCnt=TotalComCnt+CommentCount.x)%>%
+QuestionsComCntF<-inner_join(uF, zF, by="Id")%>%mutate(TotalCommentCnt=TotalComCnt+CommentCount.x)%>%
   select(Id, TotalCommentCnt, n)%>%distinct()%>%mutate(TotalComment=TotalCommentCnt+n)#ile kazde pytanie miało w sumie komentarzy+odpowiedzi
-QuestionsCommViewF<-inner_join(QuestionsComCnt, PostsF, by="Id")%>%
+QuestionsCommViewF<-inner_join(QuestionsComCntF, PostsF, by="Id")%>%
   select(Id, TotalComment, ViewCount)# Pytanie, dyskusja, liczba odsłon
 
 
@@ -45,7 +45,7 @@ plot <- QuestionsCommViewI %>%
                                                            y = "Liczba komentarzy (TotalComment)")
 
 maxI<-QuestionsCommViewI%>%filter(TotalComment==max(TotalComment))
-PostsI%>%filter(Id==max$Id)%>%select(Title, Body, ViewCount)
+PostsI%>%filter(Id==maxI$Id)%>%select(Title, Body, ViewCount)
 
 #Worldbuilding
 

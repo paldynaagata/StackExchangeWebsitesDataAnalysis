@@ -8,12 +8,19 @@ library(stringi)
 
 #------eng_stop_words ---dokument txt gdzies są przetrzymywane tzw stop_wrods->wersja angielska
 eng_stop_words <-read_lines("C:/Users/hp/Desktop/STUDIA/PAD-R/pd3_PADR_PADPy/PADR/eng_stop_words.txt")
+eng_stop_words <-read_lines("C:/Users/aga71/OneDrive/studia/SEMESTRY/MGR/I/inne/pd3_PADR_PADPy/PADR/eng_stop_words.txt")
 
 #------------scieżki u Mariki
 
 fitness<-"C:/Users/hp/Desktop/STUDIA/PAD-R/pd3_PADR_PADPy/serwisy_csv/fitness_stackexchange_com"
 interpersonal<-"C:/Users/hp/Desktop/STUDIA/PAD-R/pd3_PADR_PADPy/serwisy_csv/interpersonal_stackexchange_com"
 worldbuilding<-"C:/Users/hp/Desktop/STUDIA/PAD-R/pd3_PADR_PADPy/serwisy_csv/worldbuilding_stackexchange_com"
+
+#------------scieżki u Agaty
+
+fitness<-"C:/Users/aga71/OneDrive/studia/SEMESTRY/MGR/I/inne/pd3_PADR_PADPy/serwisy_csv/fitness_stackexchange_com"
+interpersonal<-"C:/Users/aga71/OneDrive/studia/SEMESTRY/MGR/I/inne/pd3_PADR_PADPy/serwisy_csv/interpersonal_stackexchange_com"
+worldbuilding<-"C:/Users/aga71/OneDrive/studia/SEMESTRY/MGR/I/inne/pd3_PADR_PADPy/serwisy_csv/worldbuilding_stackexchange_com"
 
 #----wczytanie Tags
 TagsF<-read.csv(paste(fitness, "/Tags.csv", sep=""), header=TRUE)
@@ -229,8 +236,8 @@ Words_cntW %>%
        y = "Liczba wystąpień", x = "")
 
 
-wordcloud(Words_cntF$WordsF, Words_cntF$n,
-          max.words = 100,
+wordcloud(Words_cntW$WordsW, Words_cntW$n,
+          max.words = 100,random.order = FALSE,
           scale = c(2.8, 0.8),
           colors = RColorBrewer::brewer.pal(9, "PuBu")[5:9])
 
