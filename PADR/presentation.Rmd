@@ -1,0 +1,54 @@
+---
+title: "Analiza serwisów Stack Exchange"
+author: "Agata Pa³dyna, Marika Partyka"
+#date: "9 stycznia 2019"
+output: 
+  revealjs::revealjs_presentation:
+    theme: solarized
+    transition: fade
+    center: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Wybrane serwisy
+
+- Fitness
+- Interpersonal
+- Worldbuilding
+
+## Pyt1
+
+wykres
+
+## Sposób rozwi¹zania zadania
+
+- rzecz1
+- rzecz2
+- ...
+
+## Pyt2
+
+wykres
+
+## Sposób rozwi¹zania zadania
+
+- rzecz1
+- rzecz2
+- ...
+
+## Pyt3
+
+wykres
+
+## Sposób rozwi¹zania zadania
+
+- rzecz1
+- rzecz2
+- ...
+
+## Pytania?
+
+## Dziêkujemy za uwagê :)
