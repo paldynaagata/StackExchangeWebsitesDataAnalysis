@@ -31,14 +31,17 @@ TagsW<-read.csv(paste(worldbuilding, "/Tags.csv", sep=""), header=TRUE)
 TopTagsF<-TagsF%>%arrange(desc(Count))%>%select(TagName, Count)%>%
   as.data.frame()
 
+write.csv(TopTagsF, file = "C:/Users/aga71/OneDrive/studia/SEMESTRY/MGR/I/inne/pd3_PADR_PADPy/PADR/dane_posrednie/q1/TopTagsF.csv", row.names = FALSE)
 
 TopTagsI<-TagsI%>%arrange(desc(Count))%>%select(TagName, Count)%>%
   as.data.frame() 
 
+write.csv(TopTagsI, file = "C:/Users/aga71/OneDrive/studia/SEMESTRY/MGR/I/inne/pd3_PADR_PADPy/PADR/dane_posrednie/q1/TopTagsI.csv", row.names = FALSE)
 
 TopTagsW<-TagsW%>%arrange(desc(Count))%>%select(TagName, Count)%>%
   as.data.frame() 
 
+write.csv(TopTagsW, file = "C:/Users/aga71/OneDrive/studia/SEMESTRY/MGR/I/inne/pd3_PADR_PADPy/PADR/dane_posrednie/q1/TopTagsW.csv", row.names = FALSE)
 
 #-----wczytanie Posts
 
@@ -123,6 +126,9 @@ Words_cntF <- WordsF %>%
   group_by(WordsF) %>%
   summarise(n = sum(n)) %>%
   ungroup()
+
+write.csv(Words_cntF %>%
+            top_n(50, n), file = "C:/Users/aga71/OneDrive/studia/SEMESTRY/MGR/I/inne/pd3_PADR_PADPy/PADR/dane_posrednie/q1/Words_cntF.csv", row.names = FALSE)
  
 # Wykresy-bar plot i chmurka
 
@@ -132,8 +138,8 @@ Words_cntF %>%
   ggplot() + aes(x=WordsF, y=n) +
   geom_bar(stat="identity", fill="magenta4") +
   coord_flip() +
-  labs(title = "Najpopularniejsze s≈Çowa u≈ºyte w postach",
-       y = "Liczba wystƒÖpie≈Ñ", x = "")
+  labs(title = "Najpopularniejsze s≥owa uøyte w postach",
+       y = "Liczba wystπpieÒ", x = "")
 
 
 wordcloud(Words_cntF$WordsF, Words_cntF$n,
@@ -174,6 +180,9 @@ Words_cntI <- WordsI %>%
   summarise(n = sum(n)) %>%
   ungroup()
 
+write.csv(Words_cntI %>%
+            top_n(50, n), file = "C:/Users/aga71/OneDrive/studia/SEMESTRY/MGR/I/inne/pd3_PADR_PADPy/PADR/dane_posrednie/q1/Words_cntI.csv", row.names = FALSE)
+
 # Wykresy-bar plot i chmurka
 
 Words_cntI %>%
@@ -182,8 +191,8 @@ Words_cntI %>%
   ggplot() + aes(x=WordsI, y=n) +
   geom_bar(stat="identity", fill="seagreen4") +
   coord_flip() +
-  labs(title = "Najpopularniejsze s≈Çowa u≈ºyte w postach",
-       y = "Liczba wystƒÖpie≈Ñ", x = "")
+  labs(title = "Najpopularniejsze s≥owa uøyte w postach",
+       y = "Liczba wystπpieÒ", x = "")
 
 
 wordcloud(Words_cntI$WordsI, Words_cntI$n,
@@ -224,6 +233,9 @@ Words_cntW <- WordsW %>%
   summarise(n = sum(n)) %>%
   ungroup()
 
+write.csv(Words_cntW %>%
+            top_n(50, n), file = "C:/Users/aga71/OneDrive/studia/SEMESTRY/MGR/I/inne/pd3_PADR_PADPy/PADR/dane_posrednie/q1/Words_cntW.csv", row.names = FALSE)
+
 # Wykresy-bar plot i chmurka
 
 Words_cntW %>%
@@ -232,8 +244,8 @@ Words_cntW %>%
   ggplot() + aes(x=WordsW, y=n) +
   geom_bar(stat="identity", fill="turquoise4") +
   coord_flip() +
-  labs(title = "Najpopularniejsze s≈Çowa u≈ºyte w postach",
-       y = "Liczba wystƒÖpie≈Ñ", x = "")
+  labs(title = "Najpopularniejsze s≥owa uøyte w postach",
+       y = "Liczba wystπpieÒ", x = "")
 
 
 wordcloud(Words_cntW$WordsW, Words_cntW$n,
